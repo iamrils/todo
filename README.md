@@ -93,7 +93,7 @@ sti/
 #### 1. Clone and Install
 
 ```bash
-cd /Users/quipperindonesia/Workspace/interview/sti
+cd todo
 pnpm install
 ```
 

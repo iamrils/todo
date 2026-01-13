@@ -140,14 +140,26 @@ The application includes Docker setup for development with hot reload support.
 
 #### 1. Environment Variables
 
-Create a `.env.local` file (optional, defaults are provided):
+Create a `.env.local` file (copy from `.env.example` or customize):
 
 ```env
-DATABASE_URL="postgresql://postgres:postgres@postgres:5432/sti_db"
-DB_USER="postgres"
-DB_PASSWORD="postgres"
-DB_NAME="sti_db"
-DB_PORT="5432"
+# Database Configuration
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME=sti_db
+DB_PORT=5432
+
+# Application Configuration
+APP_PORT=3000
+NODE_ENV=development
+NEXT_TELEMETRY_DISABLED=1
+
+# Database URL (for Docker: use 'postgres', for local dev: use 'localhost')
+DATABASE_URL=postgresql://postgres:postgres@postgres:5432/sti_db
+
+# NextAuth Configuration
+NEXTAUTH_SECRET=your-random-secret-key-here
+NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET="your-random-secret-key-here"
 NEXTAUTH_URL="http://localhost:3000"
 APP_PORT="3000"
